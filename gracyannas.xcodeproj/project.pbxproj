@@ -12,6 +12,7 @@
 		EBB8B7742937CDE700303BE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8B7732937CDE700303BE7 /* ContentView.swift */; };
 		EBB8B7762937CDE800303BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8B7752937CDE800303BE7 /* Assets.xcassets */; };
 		EBB8B7792937CDE800303BE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8B7782937CDE800303BE7 /* Preview Assets.xcassets */; };
+		EBB8B7842937CEAA00303BE7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8B7832937CEAA00303BE7 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		EBB8B7732937CDE700303BE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBB8B7752937CDE800303BE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB8B7782937CDE800303BE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBB8B7832937CEAA00303BE7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				EBB8B7732937CDE700303BE7 /* ContentView.swift */,
 				EBB8B7752937CDE800303BE7 /* Assets.xcassets */,
 				EBB8B7772937CDE800303BE7 /* Preview Content */,
+				EBB8B7832937CEAA00303BE7 /* UserData.swift */,
 			);
 			path = "gracyannas Watch App";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB8B7842937CEAA00303BE7 /* UserData.swift in Sources */,
 				EBB8B7742937CDE700303BE7 /* ContentView.swift in Sources */,
 				EBB8B7722937CDE700303BE7 /* gracyannasApp.swift in Sources */,
 			);

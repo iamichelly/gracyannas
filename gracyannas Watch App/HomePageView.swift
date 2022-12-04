@@ -9,9 +9,13 @@ import Foundation
 import SwiftUI
 
 struct HomePage: View {
-    
+    @ObservedObject var userData: UserData = UserData()
     var body: some View {
+
         Text("home page")
+        Button(action: {        print(Storage.loadBooleanArray(data: userData.trainingDaysData))}) {
+            Text("Dias salvos")
+        }
 
     }
 }

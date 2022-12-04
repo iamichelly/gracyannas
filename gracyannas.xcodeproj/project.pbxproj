@@ -10,7 +10,7 @@
 		EB03C5FF293CFA9200CAED3C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */; };
 		EB03C601293CFAEF00CAED3C /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C600293CFAEF00CAED3C /* HomePageView.swift */; };
 		EB03C605293CFB2200CAED3C /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C604293CFB2200CAED3C /* ColoredButton.swift */; };
-		EB03C609293D017D00CAED3C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C608293D017D00CAED3C /* UserData.swift */; };
+		EB03C60B293D031E00CAED3C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C60A293D031E00CAED3C /* UserData.swift */; };
 		EBB8B76D2937CDE700303BE7 /* gracyannas Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EBB8B76C2937CDE700303BE7 /* gracyannas Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EBB8B7722937CDE700303BE7 /* gracyannasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8B7712937CDE700303BE7 /* gracyannasApp.swift */; };
 		EBB8B7762937CDE800303BE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8B7752937CDE800303BE7 /* Assets.xcassets */; };
@@ -45,7 +45,7 @@
 		EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EB03C600293CFAEF00CAED3C /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		EB03C604293CFB2200CAED3C /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
-		EB03C608293D017D00CAED3C /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		EB03C60A293D031E00CAED3C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		EBB8B7662937CDE700303BE7 /* gracyannas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gracyannas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB8B76C2937CDE700303BE7 /* gracyannas Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gracyannas Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB8B7712937CDE700303BE7 /* gracyannasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gracyannasApp.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				EB03C604293CFB2200CAED3C /* ColoredButton.swift */,
 				EB03C600293CFAEF00CAED3C /* HomePageView.swift */,
 				EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */,
-				EB03C608293D017D00CAED3C /* UserData.swift */,
+				EB03C60A293D031E00CAED3C /* UserData.swift */,
 				EBB8B7752937CDE800303BE7 /* Assets.xcassets */,
 				EBB8B7772937CDE800303BE7 /* Preview Content */,
 			);
@@ -201,10 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB03C609293D017D00CAED3C /* UserData.swift in Sources */,
 				EB03C605293CFB2200CAED3C /* ColoredButton.swift in Sources */,
 				EB03C5FF293CFA9200CAED3C /* OnboardingView.swift in Sources */,
 				EBB8B7722937CDE700303BE7 /* gracyannasApp.swift in Sources */,
+				EB03C60B293D031E00CAED3C /* UserData.swift in Sources */,
 				EB03C601293CFAEF00CAED3C /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

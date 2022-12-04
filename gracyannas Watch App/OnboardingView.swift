@@ -4,18 +4,12 @@
 //
 //  Created by mvitoriapereirac on 26/11/22.
 //
+
 import SwiftUI
 
 struct OnboardingView: View {
-    @AppStorage("Seg") var isClickedSeg = false
-    @AppStorage("Ter") var isClickedTer = false
-    @AppStorage("Qua") var isClickedQua = false
-    @AppStorage("Qui") var isClickedQui = false
-    @AppStorage("Sex") var isClickedSex = false
-    @AppStorage("Sab") var isClickedSab = false
-    @AppStorage("Dom") var isClickedDom = false
-    
     @AppStorage("Dias") var EscolheuDiasTreino = false
+    @ObservedObject var userData: UserData = UserData()
     
     
     var body: some View {
@@ -46,18 +40,19 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedSeg.toggle()
+                                        userData.trainingDays[0].toggle()
+                                        print(Storage.loadBooleanArray(data: userData.trainingDaysData))
                                         
                                     }) {
                                         Text("Seg")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedSeg ? LinearGradient(gradient: Gradient(colors: [.black   ]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[0] ? LinearGradient(gradient: Gradient(colors: [.black   ]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                             .font(.system(size: 12))
                                         
                                             .frame(width: 25, height: 25)
                                         //                            .clipShape(Circle())
                                             .padding(.all, 10)
-                                            .background(isClickedSeg ? Circle().fill(
+                                            .background(userData.trainingDays[0] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -65,7 +60,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedSeg ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder(userData.trainingDays[0] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -88,12 +83,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedTer.toggle()
+                                        userData.trainingDays[1].toggle()
                                         
                                     }) {
                                         Text("Ter")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedTer ? LinearGradient(gradient: Gradient(colors: [.    black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[1] ? LinearGradient(gradient: Gradient(colors: [.    black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                             .font(.system(size: 12))
                                         
                                             .frame(width: 25, height: 25)
@@ -103,7 +98,7 @@ struct OnboardingView: View {
 //                                        //                            .clipShape(Circle())
 //                                            .padding(.all, 12)
                                         
-                                            .background(isClickedTer ? Circle().fill(
+                                            .background(userData.trainingDays[1] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -111,7 +106,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedTer ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder(userData.trainingDays[1] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -136,12 +131,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedQua.toggle()
+                                        userData.trainingDays[2].toggle()
                                         
                                     }) {
                                         Text("Qua")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedQua ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[2] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                             .font(.system(size: 12))
                                         
                                             .frame(width: 25, height: 25)
@@ -150,7 +145,7 @@ struct OnboardingView: View {
 //                                            .frame(width: 35, height: 25)
 //                                        //                            .clipShape(Circle())
 //                                            .padding(.all, 12)
-                                            .background(isClickedQua ? Circle().fill(
+                                            .background(userData.trainingDays[2] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -158,7 +153,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedQua ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder( userData.trainingDays[2] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -175,12 +170,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedQui.toggle()
+                                        userData.trainingDays[3].toggle()
                                         
                                     }) {
                                         Text("Qui")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedQui ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[3] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                             .font(.system(size: 12))
                                         
                                             .frame(width: 25, height: 25)
@@ -189,7 +184,7 @@ struct OnboardingView: View {
 //                                            .frame(width: 35, height: 25)
 //                                            .clipShape(Circle())
 //                                            .padding(.all, 12)
-                                            .background(isClickedQui ? Circle().fill(
+                                            .background(userData.trainingDays[3] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -197,7 +192,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedQui ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder( userData.trainingDays[3] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -213,12 +208,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedSex.toggle()
+                                        userData.trainingDays[4].toggle()
                                         
                                     }) {
                                         Text("Sex")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedSex ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[4] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                             .font(.system(size: 12))
                                         
                                             .frame(width: 25, height: 25)
@@ -227,7 +222,7 @@ struct OnboardingView: View {
 //                                            .frame(width: 35, height: 25)
 //                                        //                            .clipShape(Circle())
 //                                            .padding(.all, 12)
-                                            .background(isClickedSex ? Circle().fill(
+                                            .background(userData.trainingDays[4] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -235,7 +230,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedSex ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder( userData.trainingDays[4] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -261,12 +256,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedSab.toggle()
+                                        userData.trainingDays[5].toggle()
                                         
                                     }) {
                                         Text("Sáb")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedSab ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[5] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                         
                                             .font(.system(size: 12))
                                         
@@ -276,7 +271,7 @@ struct OnboardingView: View {
 //                                            .frame(width: 35, height: 25)
 //                                        //                            .clipShape(Circle())
 //                                            .padding(.all, 12)
-                                            .background(isClickedSab ? Circle().fill(
+                                            .background(userData.trainingDays[5] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -284,7 +279,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedSab ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder( userData.trainingDays[5] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -304,12 +299,12 @@ struct OnboardingView: View {
                                 ZStack{
                                     Button(action: {
                                         print("Round Action")
-                                        self.isClickedDom.toggle()
+                                        userData.trainingDays[6].toggle()
                                         
                                     }) {
                                         Text("Dom")
                                             .scaledToFit()
-                                            .foregroundStyle(isClickedDom ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                                            .foregroundStyle(userData.trainingDays[6] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
                                         
                                             .font(.system(size: 11.4))
                                         
@@ -319,7 +314,7 @@ struct OnboardingView: View {
 //                                            .frame(width: 36, height: 25)
 //                                        //                            .clipShape(Circle())
 //                                            .padding(.all, 12)
-                                            .background(isClickedDom ? Circle().fill(
+                                            .background(userData.trainingDays[6] ? Circle().fill(
                                                 LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                             ) : Circle().fill(LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing)))
                                         
@@ -327,7 +322,7 @@ struct OnboardingView: View {
                                             .overlay(
                                                 Circle()
                                                 
-                                                    .strokeBorder( isClickedDom ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
+                                                    .strokeBorder( userData.trainingDays[6] ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomLeading) :
                                                                     LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
                                                                    
                                                                  )
@@ -353,6 +348,7 @@ struct OnboardingView: View {
                         
                         VStack{
                             Button(action: {
+                                userData.trainingDaysData = Storage.archiveBooleanArray(object: userData.trainingDays)
                                 EscolheuDiasTreino.toggle()
                                 
                                 

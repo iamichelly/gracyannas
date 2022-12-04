@@ -54,6 +54,6 @@ struct HomePage: View {
 }
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        Homescreen(progress: 0.6, doneWorkouts: 5, totalWorkouts: 6, isItOne: false, remainingWorkouts: 4)
+        HomePage(progress: 0.6, doneWorkouts: 5, totalWorkouts: 6, isItOne: false, remainingWorkouts: 4)
     }
 }

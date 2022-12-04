@@ -15,7 +15,7 @@ import UserNotifications
                 Circle()
                     .foregroundColor(.pink)
                 Text("Agende uma notificação em 5s:")
-                
+            
                 Button("Agendar"){
                     let content = UNMutableNotificationContent()
                     content.title = "O de hoje tá pago?"
@@ -42,7 +42,8 @@ import UserNotifications
 
                     let category = UNNotificationCategory(identifier: "myCategory", actions: [action, anotherAction], intentIdentifiers: [], options: [])
                     UNUserNotificationCenter.current().setNotificationCategories([category])
-                    
+                    var dateInfo: DateComponents = DateComponents()
+                    dateInfo.hour = 17
                     
 
                     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -72,8 +73,8 @@ import UserNotifications
         }
     }
     
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
+//    struct ContentView_Previews: PreviewProvider {
+//        static var previews: some View {
+//            ContentView()
+//        }
+//    }

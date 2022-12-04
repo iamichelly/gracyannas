@@ -7,16 +7,19 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @ObservedObject var userData: UserData
+    @State private var selectedDays: [Bool] = [false, false, false, false, false, false, false]
+    
     var body: some View {
         VStack {
        
             Text("Quais são meus dias de treino?")
+                .scaledToFit()
                 
             Spacer()
 
             HStack(alignment: .center){
-                
-                
+
                 ZStack{
                     Circle()
                         .strokeBorder(Color.blue, lineWidth: 1)
@@ -25,6 +28,10 @@ struct ContentView: View {
 
                 }
                 .scaledToFit()
+                .onTapGesture {
+                    selectedDays[0] = !selectedDays[0]
+                    
+                }
                 
                 ZStack{
                     Circle()

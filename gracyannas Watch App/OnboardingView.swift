@@ -16,7 +16,7 @@ struct OnboardingView: View {
         
         NavigationView{
             ZStack{
-                NavigationLink("", destination: HomePage().navigationBarBackButtonHidden(true), isActive: $EscolheuDiasTreino)
+                NavigationLink("", destination: HomePage(progress: 0.6, doneWorkouts: 5, totalWorkouts: 6, isItOne: false, remainingWorkouts: 4).navigationBarBackButtonHidden(true), isActive: $EscolheuDiasTreino)
                     .toolbar(.hidden)
                 
                 VStack{

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AB739FA2939366D00007B53 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB739F92939366D00007B53 /* Homescreen.swift */; };
 		EB03C5FF293CFA9200CAED3C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */; };
 		EB03C601293CFAEF00CAED3C /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C600293CFAEF00CAED3C /* HomePageView.swift */; };
 		EB03C605293CFB2200CAED3C /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C604293CFB2200CAED3C /* ColoredButton.swift */; };
@@ -43,7 +42,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5AB739F92939366D00007B53 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
 		EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EB03C600293CFAEF00CAED3C /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		EB03C604293CFB2200CAED3C /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
@@ -87,8 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				EBB8B7712937CDE700303BE7 /* gracyannasApp.swift */,
-				5AB739F92939366D00007B53 /* Homescreen.swift */,
-				EBB8B7732937CDE700303BE7 /* ContentView.swift */,
 				EB03C604293CFB2200CAED3C /* ColoredButton.swift */,
 				EB03C600293CFAEF00CAED3C /* HomePageView.swift */,
 				EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */,
@@ -205,8 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB8B7742937CDE700303BE7 /* ContentView.swift in Sources */,
-				5AB739FA2939366D00007B53 /* Homescreen.swift in Sources */,
 				EB03C605293CFB2200CAED3C /* ColoredButton.swift in Sources */,
 				EB03C5FF293CFA9200CAED3C /* OnboardingView.swift in Sources */,
 				EBB8B7722937CDE700303BE7 /* gracyannasApp.swift in Sources */,

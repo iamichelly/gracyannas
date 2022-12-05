@@ -349,6 +349,7 @@ struct OnboardingView: View {
                         VStack{
                             Button(action: {
                                 userData.trainingDaysData = Storage.archiveBooleanArray(object: userData.trainingDays)
+                                userData.trainingAmountPerWeek = userData.trainingDays.filter{$0}.count
                                 EscolheuDiasTreino.toggle()
                                 
                                 

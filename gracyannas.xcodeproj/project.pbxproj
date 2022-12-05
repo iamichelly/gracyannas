@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4B2D02293D4CB50026CDBE /* DateTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B2D01293D4CB50026CDBE /* DateTrack.swift */; };
 		EB03C5FF293CFA9200CAED3C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */; };
 		EB03C601293CFAEF00CAED3C /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C600293CFAEF00CAED3C /* HomePageView.swift */; };
 		EB03C605293CFB2200CAED3C /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C604293CFB2200CAED3C /* ColoredButton.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC4B2D01293D4CB50026CDBE /* DateTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTrack.swift; sourceTree = "<group>"; };
 		EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EB03C600293CFAEF00CAED3C /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		EB03C604293CFB2200CAED3C /* ColoredButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				EB03C600293CFAEF00CAED3C /* HomePageView.swift */,
 				EB03C5FE293CFA9200CAED3C /* OnboardingView.swift */,
 				EB03C60A293D031E00CAED3C /* UserData.swift */,
+				BC4B2D01293D4CB50026CDBE /* DateTrack.swift */,
 				EBB8B7752937CDE800303BE7 /* Assets.xcassets */,
 				EBB8B7772937CDE800303BE7 /* Preview Content */,
 			);
@@ -209,6 +212,7 @@
 				EB03C60D293D3C3200CAED3C /* ContentView.swift in Sources */,
 				EBB8B7722937CDE700303BE7 /* gracyannasApp.swift in Sources */,
 				EB03C60B293D031E00CAED3C /* UserData.swift in Sources */,
+				BC4B2D02293D4CB50026CDBE /* DateTrack.swift in Sources */,
 				EB03C601293CFAEF00CAED3C /* HomePageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

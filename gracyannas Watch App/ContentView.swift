@@ -9,6 +9,8 @@ import UserNotifications
 
 
     struct ContentView: View {
+        @StateObject var delegate = NotificationDelegate()
+        
         var body: some View {
             VStack {
                 
@@ -67,6 +69,7 @@ import UserNotifications
                 print(error.localizedDescription)
                 }
                 }
+                UNUserNotificationCenter.current().delegate = delegate
                 
             })
         }
@@ -77,3 +80,15 @@ import UserNotifications
 //            ContentView()
 //        }
 //    }
+
+class NotificationDelegate: NSObject, ObservableObject, UNUserNotificationCenterDelegate {
+    @Published var foiTreinar = 0
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.actionIdentifier == "my_action" {
+            foiTreinar += 1
+            print(foiTreinar)
+        }
+        completionHandler()
+    }
+}

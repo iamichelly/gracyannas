@@ -20,8 +20,8 @@ struct HomePage: View {
     fileprivate func sendNotifications(_ content: UNMutableNotificationContent, weekday: Int) {
         var dateInfo = DateComponents()
         dateInfo.weekday = weekday
-        dateInfo.hour = 22
-        dateInfo.minute = 2
+        dateInfo.hour = 23
+        dateInfo.minute = 14
         dateInfo.second = 30
         print("luquinhas vai tatuar a lorde:" + String(weekday))
         

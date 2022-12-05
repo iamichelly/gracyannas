@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct gracyannas_Watch_AppApp: App {
     var body: some Scene {
-        var contentView = OnboardingView()
+        let contentView = OnboardingView()
         
         WindowGroup {
             if contentView.EscolheuDiasTreino == false {

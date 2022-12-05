@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct OnboardingView: View {
     @AppStorage("Dias") var EscolheuDiasTreino = false
@@ -351,7 +352,6 @@ struct OnboardingView: View {
                                 userData.trainingDaysData = Storage.archiveBooleanArray(object: userData.trainingDays)
                                 EscolheuDiasTreino.toggle()
                                 
-                                
                             }) {
                                 Text("Me ajuda, vai!")
                                 .foregroundStyle(EscolheuDiasTreino ? LinearGradient(gradient: Gradient(colors: [.black]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.yellow, .orange, .pink, .red]), startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -380,7 +380,15 @@ struct OnboardingView: View {
                     
                 }
 
-            }
+            }.onAppear(perform: { UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                if success{
+                print("All set")
+                } else if let error = error {
+                print(error.localizedDescription)
+                }
+                }
+                
+            })
         }
        
        

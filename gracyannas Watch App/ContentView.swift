@@ -24,29 +24,26 @@ import UserNotifications
                     content.categoryIdentifier = "myCategory"
                     content.attachments = []
                     
-
-//                    let attachement = try! UNNotificationAttachment(
-//                        identifier: "image",
-//                        url: Bundle.main.url(forResource: "//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/280px-Andromeda_Galaxy_%28with_h-alpha%29.jpg", withExtension: "jpg")!,
-//                        options: nil)
-//
-//                        content.attachments = [ attachement ]
                     
                     let action = UNNotificationAction(identifier: "my_action",
                                                       title: "TÁ PAGO 💪",
                                                       options: [])
+                    
                     let anotherAction = UNNotificationAction(identifier: "another_action",
                                                              title: "Tô devendo 😫",
                                                              options: [])
                     
 
                     let category = UNNotificationCategory(identifier: "myCategory", actions: [action, anotherAction], intentIdentifiers: [], options: [])
-                    UNUserNotificationCenter.current().setNotificationCategories([category])
-                    var dateInfo: DateComponents = DateComponents()
-                    dateInfo.hour = 17
                     
+                    UNUserNotificationCenter.current().setNotificationCategories([category])
+                    
+                    var dateInfo = DateComponents()
+                    dateInfo.hour = 20
+                    dateInfo.minute = 12
+                    print(dateInfo)
 
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                    let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
 
                     let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
                     
@@ -57,6 +54,8 @@ import UserNotifications
                             print("notif. agendada")
                         }
                     }
+                    
+                    
                 }
                 
             }
